@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(financial-analysis)",
+      "mcp__plugin_claude-mem_mcp-search__get_observations",
+      "Bash(python .claude/tools/*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/tools/inbox.py --check"
+          }
+        ]
+      }
+    ]
+  }
+}
